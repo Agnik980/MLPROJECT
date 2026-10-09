@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Prediction</title>
+</head>
+<body>
+    <h2>Heart Disease Prediction</h2>
+
+    <form action="/predict" method="POST">
+        <!-- Add input fields in the EXACT same column order as your training features (X) -->
+        <label>Age:</label>
+        <input type="number" step="any" name="age" required><br><br>
+
+        <label>sex:</label>
+        <input type="number" step="any" name="sex" required><br><br>
+
+        <label>cp:</label>
+        <input type="number" step="any" name="cp" required><br><br>
+
+        <label>trestbps:</label>
+        <input type="number" step="any" name="trestbps" required><br><br>
+
+
+       <label>chol:</label>
+        <input type="number" step="any" name="chol" required><br><br>
+
+        <label>fbs:</label>
+        <input type="number" step="any" name="fbs" required><br><br>
+
+        <label>restecg:</label>
+        <input type="number" step="any" name="restecg" required><br><br>
+
+        <label>thalch:</label>
+        <input type="number" step="any" name="thalch" required><br><br>
+        <label>exang:</label>
+        <input type="number" step="any" name="feature1" required><br><br>
+
+        <label>oldpeak:</label>
+        <input type="number" step="any" name="oldpeak" required><br><br>
+
+        <label>slope:</label>
+        <input type="number" step="any" name="slope" required><br><br>
+
+        <label>ca:</label>
+        <input type="number" step="any" name="ca" required><br><br>
+
+
+       <label>thal:</label>
+        <input type="number" step="any" name="thal" required><br><br>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Repeat for all features in your dataset -->
+
+
+
+
+
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <!-- Prediction Output -->
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
